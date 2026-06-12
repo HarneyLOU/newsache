@@ -13,8 +13,14 @@ dependencies = [
     "pyyaml",
     "python-dateutil",
     "tenacity",
-    "trafilatura>=2.1.0",
+    "trafilatura",
+    "fastapi",
+    "uvicorn[standard]",
 ]
+
+# DEV dependencies
+[project.optional-dependencies]
+dev = ["ipykernel", "pytest", "pytest-cov", "ruff"]
 
 [tool.dagster]
 module_name = "news_pipeline.definitions"
@@ -24,7 +30,7 @@ requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools]
-package-dir = {"" = "src"}
+package-dir = { "" = "src" }
 
 [tool.setuptools.packages.find]
 where = ["src"]
