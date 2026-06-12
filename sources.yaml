@@ -1,0 +1,12 @@
+sources:
+  - name: "Google AI Blog"
+    url: "https://blog.google/technology/ai/rss/"
+    category: "ai"
+
+  - name: "AWS Machine Learning Blog"
+    url: "https://aws.amazon.com/blogs/machine-learning/feed/"
+    category: "ai"
+
+  - name: "Towards Data Science"
+    url: "https://towardsdatascience.com/category/data-science/data-engineering/feed/"
+    category: "data-engineering"

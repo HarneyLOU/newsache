@@ -1,0 +1,30 @@
+[project]
+name = "newsache"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "dagster",
+    "dagster-webserver",
+    "feedparser",
+    "httpx",
+    "psycopg[binary]",
+    "pydantic",
+    "pydantic-settings",
+    "pyyaml",
+    "python-dateutil",
+    "tenacity",
+    "trafilatura>=2.1.0",
+]
+
+[tool.dagster]
+module_name = "news_pipeline.definitions"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,40 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Dagster: dev server",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "dagster",
+      "args": [
+        "dev",
+      ],
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src"
+      },
+      "justMyCode": false,
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Dagster: execute news_ingestion_job",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "dagster",
+      "args": [
+        "job",
+        "execute",
+        "-m",
+        "news_pipeline.definitions",
+        "-j",
+        "news_ingestion_job"
+      ],
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src"
+      },
+      "justMyCode": false,
+      "console": "integratedTerminal"
+    }
+  ]
+}
